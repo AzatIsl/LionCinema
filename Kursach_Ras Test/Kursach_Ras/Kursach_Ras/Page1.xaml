@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_Ras.Page1">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="0, 20, 0, 20">
+            <Label HorizontalOptions="Center" Margin="0, 20, 0, 20" FontSize="25" TextColor="Black">Зеленая книга</Label>
+                </Frame>
+                <WebView 
+                Source="https://www.youtube.com/embed/YmnRhBZ1dKI"
+                WidthRequest="360"
+                HeightRequest="240"
+                MinimumHeightRequest="360"
+                MinimumWidthRequest="240"> 
+            </WebView>
+            <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="10, 20, 10,10">
+                <StackLayout>
+                    <Label Margin="0" HorizontalOptions="Center" FontSize="18" TextColor="Black">1960-е годы. После закрытия нью-йоркского ночного клуба на ремонт вышибала Тони по прозвищу Болтун ищет подработку на пару месяцев. Как раз в это время Дон Ширли — утонченный светский лев, богатый и талантливый чернокожий музыкант, исполняющий классическую музыку — собирается в турне по южным штатам, где ещё сильны расистские убеждения и царит сегрегация. Он нанимает Тони в качестве водителя, телохранителя и человека, способного решать текущие проблемы. У этих двоих так мало общего, и эта поездка навсегда изменит жизнь обоих.</Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

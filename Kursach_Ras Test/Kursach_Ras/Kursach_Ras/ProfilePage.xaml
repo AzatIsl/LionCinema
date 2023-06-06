@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_Ras.ProfilePage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="10, 30, 10,10">
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Margin="0" FontSize="25" TextColor="Black">Профиль</Label>
+                        <Label Margin="3, 0, 0, 0" Text="Имя"></Label>
+                        <Entry IsReadOnly="True" x:Name="NameEdit" Margin="0,-15,10,0" PlaceholderColor="Gray"></Entry>
+
+                        <Label Margin="3, 0, 0, 0" Text="Логин"></Label>
+                        <Entry Margin="0,-15,10,0" IsReadOnly="True" x:Name="LoginEdit" PlaceholderColor="Gray"></Entry>
+
+                        <Label Margin="3, 0, 0, 0" Text="Пароль"></Label>
+                        <Entry Margin="0,-15,10,0" IsReadOnly="True" x:Name="PasswordEdit" PlaceholderColor="Gray"></Entry>
+
+                        <Button x:Name="ButtonEdit" Clicked="ButtonEdit_Clicked" Text="Нажмите, чтобы изменить"></Button>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

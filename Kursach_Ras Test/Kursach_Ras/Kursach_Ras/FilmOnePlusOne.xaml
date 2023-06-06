@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_Ras.FilmOnePlusOne">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="0, 20, 0, 20">
+                    <Label HorizontalOptions="Center" Margin="0, 20, 0, 20" FontSize="25" TextColor="Black">Один плюс один</Label>
+                </Frame>
+                <WebView 
+                Source="https://www.youtube.com/embed/Z2lxc0lCFTc"
+                WidthRequest="360"
+                HeightRequest="240"
+                MinimumHeightRequest="360"
+                MinimumWidthRequest="240">
+                </WebView>
+                <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="10, 20, 10,10">
+                    <StackLayout>
+                        <Label Margin="0" HorizontalOptions="Center" FontSize="18" TextColor="Black">Пострадав в результате несчастного случая, богатый аристократ Филипп нанимает в помощники человека, который менее всего подходит для этой работы, – молодого жителя предместья Дрисса, только что освободившегося из тюрьмы. Несмотря на то, что Филипп прикован к инвалидному креслу, Дриссу удается привнести в размеренную жизнь аристократа дух приключений.</Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

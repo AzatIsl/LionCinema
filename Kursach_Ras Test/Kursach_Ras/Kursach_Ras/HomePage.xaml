@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_Ras.HomePage" >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout >
+                <Frame BackgroundColor="#ebebeb" BorderColor="Black" Margin="10, 30, 10,10">
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Margin="0" FontSize="25" TextColor="Black">Скоро в кино</Label>
+                        <CarouselView x:Name="carouselView" HeightRequest="400">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding ImageSource}" />
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <StackLayout >
+                            <Label HorizontalTextAlignment="Center" Margin="10, 0, 10, 10" FontSize="15" Text="Все фильмы можно будет посмотреть в разделе Фильмы. "></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame  BackgroundColor="#ebebeb" BorderColor="Black" Margin="10, 10, 10, 10">
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Margin="0" FontSize="25" TextColor="Black">Новости Hollywood'a</Label>
+                        <Label HorizontalOptions="Center" Margin="0" FontSize="18" TextColor="Black">Джонни Депп выиграл суд о клевете у Эмбер Херд.</Label>
+                        <Image Margin="7" Source="depp.jpg" Aspect="AspectFill" />
+                        <Label HorizontalTextAlignment="Center" Text="Завершился судебный процесс в штате Вирджиния между Джонни Деппом и Эмбер Херд. Депп судился из-за статьи в The Washington Post, в которой Херд обвинила актера в насилии. Херд выдвинула встречный иск на 100 миллионов. Присяжные в итоге стали на сторону Деппа и признали статью клеветнической."></Label>
+
+                        <Label HorizontalOptions="Center" Margin="0" FontSize="18" TextColor="Black">Последняя гонка: Пол Уокер появился в финальном трейлере «Форсажа 10»</Label>
+                        <Image Margin="7" Source="Pol.jpg" Aspect="AspectFill" />
+                        <Label HorizontalTextAlignment="Center" Text="В трейлере фильма «Форсаж 10» появились кадры с Полом Уокером. Сюжет фильма будет про противостояние героев, сыграют Вин Дизель и Джейсон Момоа. В фильме появится Мидоу, дочь Пола Уокера. «Форсаж 10» выйдет в прокат 19 мая."></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
