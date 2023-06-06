@@ -1,0 +1,22 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Личный кабинет сотрудника";
+    Layout = "_EmpLayout";
+}
+<link rel="stylesheet" href="~/css/Private.css" asp-append-version="true" />
+<form asp-action="PrivateAccountEmp" method="post">
+    <div class="new">
+        <div class="login">
+            <p class="labels">Логин</p>
+            <input required type="text" name="login" value="@Model.EmployeeLog"/>
+        </div>
+    <div class="pass">
+         <p class="labels">Пароль</p>
+        <input required type="text" name="Password" value="@Model.EmployeePas"/>
+        
+    </div>
+    <div class="save">
+        <button class="saveBtn" asp-action="SaveChangesEmp">Сохранить изменения</button>
+    </div>
+    </div>
+</form>

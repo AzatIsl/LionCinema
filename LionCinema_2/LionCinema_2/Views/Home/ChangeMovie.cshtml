@@ -1,0 +1,43 @@
+﻿@model Movie
+@{
+	ViewData["Title"] = "Изменение фильма";
+	Layout = "_EmpLayout";
+}
+<link rel="stylesheet" href="~/css/AddingMov.css" asp-append-version="true" />
+<form asp-action="ChangeMovie" method="post" enctype="multipart/form-data">
+	<body>
+		@using (LionCinemaContext db = new LionCinemaContext())
+		{
+		<div>
+			<button type="submit" class="delete">Очистить</button>
+			<div class="image">
+					@{
+						var base64 = Convert.ToBase64String(Model.MovieImg);
+						var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+					}
+					<img id="uploadingMovieImage" src="@imgSrc" style="width: 220px; height: 300px;" />
+			</div>
+
+			<input required type="file" class="chooseImage d-inline" id="photo-uploader" accept=".png, .jpg, .jpeg" name="movieimg" />
+			<p class="category">Название</p>
+			<input required type="text" name="moviename" class="inputCategory" value="@Model.MovieName">
+			<p class="category">Ссылка на фильм </p>
+			<input required type="text" name="moviepath" class="inputCategory" value="@Model.MoviePath">
+			<button type="submit" class="save" asp-action="SaveChangeMovie" asp-route-id="@Model.MovieId">Сохранить</button>
+			<table>
+				<tr><th>id</th><th>Название</th><th>Ссылка</th></tr>
+					@foreach (var item in db.Movies)
+					{
+						<tr>
+							<td>@item.MovieId</td>
+							<td>@item.MovieName</td>
+							<td>@item.MoviePath</td>
+						</tr>
+					}
+			</table>
+		</div>
+		}
+	</body>
+
+</form>
+<script src="~/js/MovieAdd.js" asp-append-version="true"></script>

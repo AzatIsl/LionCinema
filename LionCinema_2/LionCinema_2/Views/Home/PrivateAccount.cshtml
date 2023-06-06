@@ -1,0 +1,26 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Личный кабинет";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/Private.css" asp-append-version="true" />
+<form asp-action="PrivateAccount" method="post">
+    <div class="new">
+        <div class="login">
+            <p class="labels">Логин</p>
+            <input required type="text" name="login" value="@Model.UserLog" />
+        </div>
+        <div class="pass">
+            <p class="labels">Пароль</p>
+            <input required type="text" name="Password" value="@Model.UserPas" />
+        </div>
+        <div class="nik">
+            <p class="labels">Имя</p>
+            <input required type="text" name="name" value="@Model.UserName" />
+        </div>
+        <div class="save">
+            <p style="color:red; font-size: 12px; vertical-align: top">@ViewBag.Message</p>
+            <button class="saveBtn" asp-action="SaveChangesUser">Сохранить изменения</button>
+        </div>
+    </div>
+</form>

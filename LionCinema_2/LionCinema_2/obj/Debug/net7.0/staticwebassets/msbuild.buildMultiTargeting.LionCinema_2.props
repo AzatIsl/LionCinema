@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LionCinema_2.props" />
+</Project>
